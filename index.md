@@ -4,20 +4,21 @@ layout: homepage
 
 ## About Me
 
-I am a Ph.D. student at ...
+I am an undergraduate student at **Hefei University of Technology**, advised by [Prof. Qiang Zhang](https://faculty.hfut.edu.cn/~Azauye/zh_CN/index.htm) and Prof. Yanjiu Zhong. I am also a Research Assistant at the **PEAK Lab, The Hong Kong University of Science and Technology (Guangzhou)**, working with [Prof. Changhao Chen](https://changhao-chen.github.io/), and a Research Intern at the **Shanghai Artificial Intelligence Laboratory**, working with [Dr. Xuhong Wang](https://wangxuhongcn.github.io/).
+
+I am interested in how intelligent systems can develop an understanding that guides action and continues to evolve with experience. I currently study this question through robots and embodied environments, where physical actions produce clear and verifiable feedback. My current work asks three questions: How can a system understand what its actions will change? What knowledge about action can be retained and reused across different robot embodiments? How can a system learn from past successful improvements to make future self-improvement more efficient and reliable?
 
 ## Research Interests
 
-- **Computer Vision:** image recognition, image generation, video captioning
-- **Machine Learning:** meta-learning, incremental learning, transfer learning
+- **World Models:** predictive representation learning, joint-embedding predictive architectures (JEPA), action-conditioned world models
+- **Robot Learning:** diffusion policies, vision-language-action models, cross-embodiment learning
+- **Self-Improving Agents:** continual learning, meta-learning, policy improvement
 
 ## News
 
-- **[Feb. 2020]** Our paper about incremental learning is accepted to CVPR 2020.
-- **[Feb. 2020]** We will host the ACM Multimedia Asia 2020 conference in Singapore!
-- **[Sept. 2019]** Our paper about few-shot learning is accepted to NeurIPS 2019.
-- **[Mar. 2019]** Our paper about few-shot learning is accepted to CVPR 2019.
+- **[Jul. 2026]** Joined the PEAK Lab at HKUST(GZ) as a Research Assistant.
+- **[Jun. 2026]** Our paper **DRIFT** was published in *Expert Systems with Applications*.
+- **[2025]** Selected for the 2025 Excellence Program of the National College Student Innovation and Entrepreneurship Training Program.
+- **[2025]** Received First Prize in the 19th “Challenge Cup” National College Students' Extracurricular Academic Science and Technology Works Competition.
 
 {% include_relative _includes/publications.md %}
-
-{% include_relative _includes/services.md %}

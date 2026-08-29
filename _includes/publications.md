@@ -7,16 +7,22 @@
 
 <li>
 <div class="pub-row">
-  <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
-    {% if link.image %} 
-    <img src="{{ link.image }}" class="teaser img-fluid z-depth-1" style="width=100;height=40%">
+  <div class="col-sm-3 abbr" style="position:relative;flex:0 0 190px;width:190px;padding-right:10px;padding-left:5px;">
+    {% if link.image %}
+    <img src="{{ link.image }}" class="teaser img-fluid z-depth-1" alt="Teaser image for {{ link.title }}" style="width:175px;height:110px;max-width:100%;object-fit:contain;background:#fff;">
+    {% else %}
+    <div class="teaser publication-placeholder" aria-hidden="true" style="width:175px;height:110px;max-width:100%;background:transparent;box-shadow:none;"></div>
+    {% endif %}
     {% if link.conference_short %} 
     <abbr class="badge">{{ link.conference_short }}</abbr>
     {% endif %}
-    {% endif %}
   </div>
-  <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
-      <div class="title"><a href="{{ link.pdf }}">{{ link.title }}</a></div>
+  <div class="col-sm-9" style="position:relative;flex:1 1 auto;width:auto;min-width:0;padding-right:5px;padding-left:10px;">
+      <div class="title">
+      {% if link.pdf %}<a href="{{ link.pdf }}">{{ link.title }}</a>
+      {% elsif link.doi %}<a href="{{ link.doi }}">{{ link.title }}</a>
+      {% else %}{{ link.title }}{% endif %}
+      </div>
       <div class="author">{{ link.authors }}</div>
       <div class="periodical"><em>{{ link.conference }}</em>
       </div>
@@ -32,6 +38,9 @@
       {% endif %}
       {% if link.bibtex %} 
       <a href="{{ link.bibtex }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">BibTex</a>
+      {% endif %}
+      {% if link.doi %}
+      <a href="{{ link.doi }}" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener" style="font-size:12px;">DOI</a>
       {% endif %}
       {% if link.notes %} 
       <strong> <i style="color:#e74d3c">{{ link.notes }}</i></strong>
