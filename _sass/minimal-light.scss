@@ -458,6 +458,32 @@ footer {
   text-align:center;
 }
 
+.page-meta {
+  color:#777;
+  font-size:11px;
+  line-height:1.7;
+}
+
+.page-meta > div + div {
+  margin-top:0.35em;
+}
+
+.page-meta strong {
+  color:#333;
+  font-variant-numeric:tabular-nums;
+  letter-spacing:0.04em;
+}
+
+@media (prefers-color-scheme: dark) {
+  .page-meta {
+    color:#999;
+  }
+
+  .page-meta strong {
+    color:#eeeff0;
+  }
+}
+
 @media print, screen and (max-width: 960px) {
 
   .pub-row {
