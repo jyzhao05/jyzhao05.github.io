@@ -183,9 +183,38 @@ layout: homepage
   </div>
 </section>
 
-<section id="beyond" class="section">
-  <h2 class="section-title"><i class="fa-regular fa-compass section-icon"></i> Beyond Research</h2>
-  <p class="beyond-text">
-    Outside of research, I enjoy taking life slow—noticing good architecture, roadside flowers, and passing scenery. I am also learning photography, listening to J-POP, and enjoying a good beer.
-  </p>
+<section id="life" class="section">
+  <h2 class="section-title"><i class="fa-solid fa-camera-retro section-icon"></i> Life</h2>
+  <div class="life-grid">
+    <div class="life-text">
+      <p>
+        Outside of research, I enjoy taking life slow—noticing good architecture, roadside flowers, and passing scenery. I am also learning photography, listening to J-POP, and enjoying a good beer.
+      </p>
+      <p class="life-hint">
+        <i class="fa-regular fa-hand-pointer"></i> Hover the photo stack to fan out · Click to view full photo
+      </p>
+    </div>
+    <div class="photo-stack-wrap">
+      <div class="photo-stack" aria-label="Photography stack">
+        <button type="button" class="stack-card" data-src="./assets/img/photos/photo-1.png" aria-label="View photo 1">
+          <img src="./assets/img/photos/photo-1.png" alt="Photography 1" loading="lazy" />
+        </button>
+        <button type="button" class="stack-card" data-src="./assets/img/photos/photo-2.png" aria-label="View photo 2">
+          <img src="./assets/img/photos/photo-2.png" alt="Photography 2" loading="lazy" />
+        </button>
+        <button type="button" class="stack-card" data-src="./assets/img/photos/photo-3.png" aria-label="View photo 3">
+          <img src="./assets/img/photos/photo-3.png" alt="Photography 3" loading="lazy" />
+        </button>
+        <button type="button" class="stack-card" data-src="./assets/img/photos/photo-4.png" aria-label="View photo 4">
+          <img src="./assets/img/photos/photo-4.png" alt="Photography 4" loading="lazy" />
+        </button>
+        <button type="button" class="stack-card" data-src="./assets/img/photos/photo-5.png" aria-label="View photo 5">
+          <img src="./assets/img/photos/photo-5.png" alt="Photography 5" loading="lazy" />
+        </button>
+        <button type="button" class="stack-card" data-src="./assets/img/photos/photo-6.png" aria-label="View photo 6">
+          <img src="./assets/img/photos/photo-6.png" alt="Photography 6" loading="lazy" />
+        </button>
+      </div>
+    </div>
+  </div>
 </section>
