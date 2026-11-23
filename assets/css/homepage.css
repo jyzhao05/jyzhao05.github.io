@@ -715,26 +715,26 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 230px;
-  padding: 12px 0;
+  min-height: 290px;
+  padding: 20px 0;
 }
 
 .photo-stack {
   position: relative;
   width: 360px;
-  height: 210px;
+  height: 260px;
 }
 
 .stack-card {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 132px;
-  height: 152px;
-  padding: 6px 6px 16px;
+  width: 108px;
+  height: 124px;
+  padding: 5px 5px 14px;
   background: #ffffff;
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 7px;
   box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
   cursor: pointer;
   overflow: hidden;
@@ -755,33 +755,42 @@ a:hover {
   display: block;
 }
 
-/* Stacked resting state */
-.stack-card:nth-child(1) { transform: translate(-54%, -52%) rotate(-9deg); z-index: 1; }
-.stack-card:nth-child(2) { transform: translate(-46%, -48%) rotate(7deg);  z-index: 2; }
-.stack-card:nth-child(3) { transform: translate(-52%, -49%) rotate(-4deg); z-index: 3; }
-.stack-card:nth-child(4) { transform: translate(-48%, -51%) rotate(4deg);  z-index: 4; }
-.stack-card:nth-child(5) { transform: translate(-51%, -48%) rotate(-2deg); z-index: 5; }
-.stack-card:nth-child(6) { transform: translate(-49%, -50%) rotate(2deg);  z-index: 6; }
+/* Stacked resting state (9 cards) */
+.stack-card:nth-child(1) { transform: translate(-55%, -52%) rotate(-10deg); z-index: 1; }
+.stack-card:nth-child(2) { transform: translate(-45%, -49%) rotate(8deg);   z-index: 2; }
+.stack-card:nth-child(3) { transform: translate(-53%, -48%) rotate(-6deg);  z-index: 3; }
+.stack-card:nth-child(4) { transform: translate(-47%, -52%) rotate(6deg);   z-index: 4; }
+.stack-card:nth-child(5) { transform: translate(-52%, -51%) rotate(-4deg);  z-index: 5; }
+.stack-card:nth-child(6) { transform: translate(-48%, -48%) rotate(4deg);   z-index: 6; }
+.stack-card:nth-child(7) { transform: translate(-51%, -50%) rotate(-2deg);  z-index: 7; }
+.stack-card:nth-child(8) { transform: translate(-49%, -51%) rotate(2deg);   z-index: 8; }
+.stack-card:nth-child(9) { transform: translate(-50%, -50%) rotate(0deg);   z-index: 9; }
 
-/* Fanned out on hover */
-.photo-stack:hover .stack-card:nth-child(1) { transform: translate(-158%, -84%) rotate(-8deg); z-index: 1; }
-.photo-stack:hover .stack-card:nth-child(2) { transform: translate(-50%, -92%) rotate(-2deg);  z-index: 2; }
-.photo-stack:hover .stack-card:nth-child(3) { transform: translate(58%, -84%) rotate(7deg);    z-index: 3; }
-.photo-stack:hover .stack-card:nth-child(4) { transform: translate(-150%, -10%) rotate(-5deg); z-index: 4; }
-.photo-stack:hover .stack-card:nth-child(5) { transform: translate(-50%, -4%) rotate(2deg);    z-index: 5; }
-.photo-stack:hover .stack-card:nth-child(6) { transform: translate(50%, -10%) rotate(6deg);    z-index: 6; }
+/* Fanned out on hover (3x3 grid) */
+.photo-stack:hover .stack-card:nth-child(1) { transform: translate(-155%, -148%) rotate(-6deg); z-index: 1; }
+.photo-stack:hover .stack-card:nth-child(2) { transform: translate(-50%, -152%) rotate(-1deg);  z-index: 2; }
+.photo-stack:hover .stack-card:nth-child(3) { transform: translate(55%, -148%) rotate(5deg);    z-index: 3; }
+.photo-stack:hover .stack-card:nth-child(4) { transform: translate(-158%, -50%) rotate(-4deg);  z-index: 4; }
+.photo-stack:hover .stack-card:nth-child(5) { transform: translate(-50%, -50%) rotate(1deg);    z-index: 5; }
+.photo-stack:hover .stack-card:nth-child(6) { transform: translate(58%, -50%) rotate(4deg);     z-index: 6; }
+.photo-stack:hover .stack-card:nth-child(7) { transform: translate(-155%, 48%) rotate(-5deg);   z-index: 7; }
+.photo-stack:hover .stack-card:nth-child(8) { transform: translate(-50%, 52%) rotate(2deg);     z-index: 8; }
+.photo-stack:hover .stack-card:nth-child(9) { transform: translate(55%, 48%) rotate(6deg);      z-index: 9; }
 
 .photo-stack .stack-card:hover {
   z-index: 20 !important;
   box-shadow: 0 14px 30px rgba(15, 23, 42, 0.22);
 }
 
-.photo-stack:hover .stack-card:nth-child(1):hover { transform: translate(-158%, -84%) rotate(0deg) scale(1.1); }
-.photo-stack:hover .stack-card:nth-child(2):hover { transform: translate(-50%, -92%) rotate(0deg) scale(1.1); }
-.photo-stack:hover .stack-card:nth-child(3):hover { transform: translate(58%, -84%) rotate(0deg) scale(1.1); }
-.photo-stack:hover .stack-card:nth-child(4):hover { transform: translate(-150%, -10%) rotate(0deg) scale(1.1); }
-.photo-stack:hover .stack-card:nth-child(5):hover { transform: translate(-50%, -4%) rotate(0deg) scale(1.1); }
-.photo-stack:hover .stack-card:nth-child(6):hover { transform: translate(50%, -10%) rotate(0deg) scale(1.1); }
+.photo-stack:hover .stack-card:nth-child(1):hover { transform: translate(-155%, -148%) rotate(0deg) scale(1.12); }
+.photo-stack:hover .stack-card:nth-child(2):hover { transform: translate(-50%, -152%) rotate(0deg) scale(1.12); }
+.photo-stack:hover .stack-card:nth-child(3):hover { transform: translate(55%, -148%) rotate(0deg) scale(1.12); }
+.photo-stack:hover .stack-card:nth-child(4):hover { transform: translate(-158%, -50%) rotate(0deg) scale(1.12); }
+.photo-stack:hover .stack-card:nth-child(5):hover { transform: translate(-50%, -50%) rotate(0deg) scale(1.12); }
+.photo-stack:hover .stack-card:nth-child(6):hover { transform: translate(58%, -50%) rotate(0deg) scale(1.12); }
+.photo-stack:hover .stack-card:nth-child(7):hover { transform: translate(-155%, 48%) rotate(0deg) scale(1.12); }
+.photo-stack:hover .stack-card:nth-child(8):hover { transform: translate(-50%, 52%) rotate(0deg) scale(1.12); }
+.photo-stack:hover .stack-card:nth-child(9):hover { transform: translate(55%, 48%) rotate(0deg) scale(1.12); }
 
 /* Lightbox Modal */
 .lightbox {

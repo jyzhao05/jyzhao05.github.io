@@ -188,7 +188,7 @@ layout: homepage
   <div class="life-grid">
     <div class="life-text">
       <p>
-        Outside of research, I enjoy taking life slow—noticing good architecture, roadside flowers, and passing scenery. I am also learning photography, listening to J-POP, and enjoying a good beer.
+        Outside of research, I enjoy taking life slow—noticing good architecture, roadside flowers, and passing scenery. I am also learning photography, listening to J-POP, and enjoying good coffee and beer.
       </p>
       <p class="life-hint">
         <i class="fa-regular fa-hand-pointer"></i> Hover the photo stack to fan out · Click to view full photo
@@ -213,6 +213,15 @@ layout: homepage
         </button>
         <button type="button" class="stack-card" data-src="./assets/img/photos/photo-6.png" aria-label="View photo 6">
           <img src="./assets/img/photos/photo-6.png" alt="Photography 6" loading="lazy" />
+        </button>
+        <button type="button" class="stack-card" data-src="./assets/img/photos/photo-7.png" aria-label="View photo 7">
+          <img src="./assets/img/photos/photo-7.png" alt="Photography 7" loading="lazy" />
+        </button>
+        <button type="button" class="stack-card" data-src="./assets/img/photos/photo-8.png" aria-label="View photo 8">
+          <img src="./assets/img/photos/photo-8.png" alt="Photography 8" loading="lazy" />
+        </button>
+        <button type="button" class="stack-card" data-src="./assets/img/photos/photo-9.png" aria-label="View photo 9">
+          <img src="./assets/img/photos/photo-9.png" alt="Photography 9" loading="lazy" />
         </button>
       </div>
     </div>
