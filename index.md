@@ -154,8 +154,8 @@ layout: homepage
         <span class="skill-pill">Diffusion Policies</span>
         <span class="skill-pill">Vision-Language-Action Models</span>
         <span class="skill-pill">World-Action Models</span>
-        <span class="skill-pill">Robot Learning</span>
-        <span class="skill-pill">Embodied Control</span>
+        <span class="skill-pill">Recursive Self-Improvement</span>
+        <span class="skill-pill">Representation Learning</span>
       </div>
     </div>
     <div class="skill-row">
