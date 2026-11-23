@@ -1,31 +1,35 @@
 # Basic information
 title: Jinyang Zhao
-email: JinyangZhao05 (at) gmail.com
+chinese_name: 赵锦阳
+affiliation: Hefei University of Technology
+email: JinyangZhao05@gmail.com
 lang: en-US
 
 # Search engine optimization
 keywords: world models, predictive representation learning, JEPA, robot learning, diffusion policies, cross-embodiment learning, self-improving agents, continual learning, meta-learning
-description: Jinyang Zhao is an undergraduate researcher working on embodied AI, robot learning, planning and control, representation learning, and self-improving agents.
+description: Jinyang Zhao (赵锦阳) is an undergraduate researcher at HFUT working on world models, robot learning, diffusion policies, and self-improving agents.
 url: https://jyzhao05.github.io
 baseurl: ""
 canonical: https://jyzhao05.github.io/
 
-# Academic links
+# Academic & Social links
 google_scholar: https://scholar.google.com/citations?hl=en&authuser=4&user=y5ObME0AAAAJ
 orcid: https://orcid.org/0009-0001-9457-0666
+github_link: https://github.com/jyzhao05
+cv_link: ./assets/pdf/Jinyang_Zhao_CV.pdf
 
 # Images
-avatar: ./assets/img/homepage-photo.png
+avatar: ./assets/img/pic_carteen.jpg
 favicon: ./assets/img/favicon.png
 favicon_dark: ./assets/img/favicon-dark.png
 
 # Theme options
-enable_footnote: true
-auto_dark_mode: true
-font: "Serif"
+enable_footnote: false
+auto_dark_mode: false
 
-# GitHub Pages remote theme
-remote_theme: yaoyao-liu/minimal-light
+# Build settings
+markdown: kramdown
+permalink: pretty
 
 exclude:
   - .bundle/

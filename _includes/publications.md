@@ -1,60 +1,64 @@
-<h2 id="publications" style="margin: 2px 0px -15px;">Publications</h2>
-
-<div class="publications">
-<ol class="bibliography">
-
-{% for link in site.data.publications.main %}
-
-<li>
-<div class="pub-row">
-  <div class="col-sm-3 abbr" style="position:relative;flex:0 0 190px;width:190px;padding-right:10px;padding-left:5px;">
-    {% if link.image %}
-    <img src="{{ link.image }}" class="teaser img-fluid z-depth-1" alt="Teaser image for {{ link.title }}" style="width:175px;height:110px;max-width:100%;object-fit:contain;background:#fff;">
-    {% else %}
-    <div class="teaser publication-placeholder" aria-hidden="true" style="width:175px;height:110px;max-width:100%;background:transparent;box-shadow:none;"></div>
-    {% endif %}
-    {% if link.conference_short %} 
-    <abbr class="badge">{{ link.conference_short }}</abbr>
-    {% endif %}
-  </div>
-  <div class="col-sm-9" style="position:relative;flex:1 1 auto;width:auto;min-width:0;padding-right:5px;padding-left:10px;">
-      <div class="title">
-      {% if link.pdf %}<a href="{{ link.pdf }}">{{ link.title }}</a>
-      {% elsif link.doi %}<a href="{{ link.doi }}">{{ link.title }}</a>
-      {% else %}{{ link.title }}{% endif %}
+<section id="publications" class="section">
+  <h2 class="section-title"><i class="fa-regular fa-file-lines section-icon"></i> Publications &amp; Preprints</h2>
+  <div class="pub-list">
+    {% for link in site.data.publications.main %}
+    <article class="pub-card">
+      <div class="pub-thumb">
+        {% if link.image %}
+        <img src="{{ link.image }}" alt="{{ link.title }}" loading="lazy" />
+        {% else %}
+        <div class="pub-thumb-placeholder">
+          <span>{{ link.conference_short }}</span>
+        </div>
+        {% endif %}
+        {% if link.conference_short %}
+        <span class="pub-badge {% if link.status_type == 'published' %}badge-published{% else %}badge-review{% endif %}">
+          {{ link.conference_short }}
+        </span>
+        {% endif %}
       </div>
-      <div class="author">{{ link.authors }}</div>
-      <div class="periodical"><em>{{ link.conference }}</em>
+      <div class="pub-body">
+        <h3 class="pub-title">
+          {% if link.doi %}
+          <a href="{{ link.doi }}" target="_blank" rel="noopener">{{ link.title }}</a>
+          {% elsif link.pdf %}
+          <a href="{{ link.pdf }}" target="_blank" rel="noopener">{{ link.title }}</a>
+          {% else %}
+          {{ link.title }}
+          {% endif %}
+        </h3>
+        <div class="pub-authors">{{ link.authors }}</div>
+        <div class="pub-venue">{{ link.conference }}</div>
+        {% if link.summary %}
+        <p class="pub-summary">{{ link.summary }}</p>
+        {% endif %}
+        <div class="pub-links">
+          {% if link.doi %}
+          <a class="btn-chip" href="{{ link.doi }}" target="_blank" rel="noopener"><i class="fa-solid fa-link"></i> DOI</a>
+          {% endif %}
+          {% if link.pdf %}
+          <a class="btn-chip" href="{{ link.pdf }}" target="_blank" rel="noopener"><i class="fa-regular fa-file-pdf"></i> PDF</a>
+          {% endif %}
+          {% if link.code %}
+          <a class="btn-chip" href="{{ link.code }}" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+          {% endif %}
+          {% if link.bibtex %}
+          <button type="button" class="btn-chip btn-bib" data-target="bib-{{ forloop.index }}">
+            <i class="fa-solid fa-quote-right"></i> BibTeX
+          </button>
+          {% endif %}
+        </div>
+        {% if link.bibtex %}
+        <div id="bib-{{ forloop.index }}" class="bibtex-box" hidden>
+          <div class="bibtex-header">
+            <span>BibTeX</span>
+            <button type="button" class="btn-copy-bib" data-copy-target="bib-code-{{ forloop.index }}">Copy</button>
+          </div>
+          <pre><code id="bib-code-{{ forloop.index }}">{{ link.bibtex | escape }}</code></pre>
+        </div>
+        {% endif %}
       </div>
-    <div class="links">
-      {% if link.pdf %} 
-      <a href="{{ link.pdf }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">PDF</a>
-      {% endif %}
-      {% if link.code %} 
-      <a href="{{ link.code }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Code</a>
-      {% endif %}
-      {% if link.page %} 
-      <a href="{{ link.page }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Project Page</a>
-      {% endif %}
-      {% if link.bibtex %} 
-      <a href="{{ link.bibtex }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">BibTex</a>
-      {% endif %}
-      {% if link.doi %}
-      <a href="{{ link.doi }}" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener" style="font-size:12px;">DOI</a>
-      {% endif %}
-      {% if link.notes %} 
-      <strong> <i style="color:#e74d3c">{{ link.notes }}</i></strong>
-      {% endif %}
-      {% if link.others %} 
-      {{ link.others }}
-      {% endif %}
-    </div>
+    </article>
+    {% endfor %}
   </div>
-</div>
-</li>
-<br>
-
-{% endfor %}
-
-</ol>
-</div>
+</section>

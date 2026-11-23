@@ -1,20 +1,48 @@
 main:
-  - title: "OpenFuture: Learning What Must Remain Possible for Safe Self-Improvement"
-    authors: "<strong>Jinyang Zhao</strong> et al."
+  - title: "Your Agent Is Secretly a World Model in Pixel Space"
+    authors: "<strong>Core Member</strong>"
     conference_short: Under Review
+    status_type: review
     conference: "Manuscript under review, 2026."
+    summary: "Proposes WATARI, a 990-item benchmark across 27 visual worlds that evaluates the same model as both an agent and a pixel-space world model against exact simulator states, revealing compositional object-category structure and family fingerprints in hidden states."
+    image: ./assets/img/WATARI.png
+    notes: Under Review
+
+  - title: "Every Update Counts: Learning What to Learn Next for Recursive Self-Improvement"
+    authors: "<strong>First Author</strong>"
+    conference_short: Under Review
+    status_type: review
+    conference: "Manuscript under review, 2026."
+    summary: "Introduces ReCUE, a recursive self-improvement framework that turns corrective search experience into supervision for a persistent decision model while using evaluations of alternative model updates to guide how future experience is used."
+    image: ./assets/img/ReCUE.png
     notes: Under Review
 
   - title: "PTC: Predictive Transition Conditioning for Continual Relation Prediction"
-    authors: "<strong>Jinyang Zhao</strong> et al."
+    authors: "<strong>First Author</strong>"
     conference_short: Under Review
+    status_type: review
     conference: "Manuscript under review, 2026."
+    summary: "Encodes relational dynamics from completed interactions into discrete transition representations retrievable from action-conditioned context, preserving predictability across continual updates while retaining 2.9× as many historical transition events under the same memory budget."
+    image: ./assets/img/PTC.png
     notes: Under Review
 
   - title: "DRIFT: Coordinating Target Intent and Local Geometry for Diffusion-Based Trajectory Generation"
-    authors: "<strong>Jinyang Zhao</strong>, Handong Zheng, Yanjiu Zhong*, Qiang Zhang, and Shunyu Wu"
-    conference_short: ESWA
-    conference: "<em>Expert Systems with Applications</em>, Volume 331, Article 133261, 2026."
+    authors: "<strong>Jinyang Zhao</strong>, Handong Zheng, Yanjiu Zhong*, Qiang Zhang, and Shunyu Wu (First Author)"
+    conference_short: ESWA 2026
+    status_type: published
+    conference: "<em>Expert Systems with Applications</em>, Volume 331, Article 133261, 2026 · <strong>JCR Q1, IF: 9.4</strong>"
+    summary: "Reconciles goal intent and local geometry via repeated goal conditioning and dynamic retrieval from structured scene memory, reducing jerk by 94.8% relative to a raw-point CVAE while matching endpoint accuracy."
     doi: https://doi.org/10.1016/j.eswa.2026.133261
     image: ./assets/img/DRIFT.png
+    bibtex: |
+      @article{zhao2026drift,
+        title={DRIFT: Coordinating Target Intent and Local Geometry for Diffusion-Based Trajectory Generation},
+        author={Zhao, Jinyang and Zheng, Handong and Zhong, Yanjiu and Zhang, Qiang and Wu, Shunyu},
+        journal={Expert Systems with Applications},
+        volume={331},
+        pages={133261},
+        year={2026},
+        publisher={Elsevier},
+        doi={10.1016/j.eswa.2026.133261}
+      }
     notes: Published

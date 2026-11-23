@@ -1,219 +1,102 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: 'en-US' }}">
   <head>
-    <title>{{ site.title }} | {{site.affiliation}}</title>
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ site.description }}">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ site.title }} ({{ site.chinese_name }}) | {{ site.affiliation }}</title>
+    <meta name="description" content="{{ site.description }}" />
     {% if site.keywords %}
-    <meta name="keywords" content="{{ site.keywords }}">
+    <meta name="keywords" content="{{ site.keywords }}" />
     {% endif %}
     {% if site.canonical %}
-    <link rel="canonical" href="{{ site.canonical }}"/>
+    <link rel="canonical" href="{{ site.canonical }}" />
     {% endif %}
 
-    <link rel="icon" media="(prefers-color-scheme:dark)" href="{{ site.favicon_dark }}" type="image/png" />
-    <link rel="icon" media="(prefers-color-scheme:light)" href="{{ site.favicon }}" type="image/png" />
-    <script src="./assets/js/favicon-switcher.js" type="application/javascript"></script>
+    <link rel="icon" href="{{ site.favicon }}" type="image/png" />
 
-    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin=anonymous>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    {% if site.font == "Sans Serif" %}
-    <link rel="stylesheet" href="./assets/css/font_sans_serif.css">
-    {% else %}
-    <link rel="stylesheet" href="./assets/css/font.css">
-    {% endif %}
-    {% if site.auto_dark_mode %}
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/publications.css">
-    {% else %}
-    <link rel="stylesheet" href="./assets/css/style-no-dark-mode.css">
-    <link rel="stylesheet" href="./assets/css/publications-no-dark-mode.css">
-    {% endif %}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/homepage.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        
-        {% if site.avatar %}
-        <a class="image avatar"><img src="{{ site.avatar }}" alt="avatar" /></a>
-        {% endif %}
+    <header class="site-nav">
+      <div class="nav-inner">
+        <a class="nav-brand" href="#hero">{{ site.title }}</a>
+        <nav class="nav-links" aria-label="Primary Navigation">
+          <a href="#about">About</a>
+          <a href="#news">News</a>
+          <a href="#publications">Publications</a>
+          <a href="#projects">Projects</a>
+          <a href="#honors">Honors</a>
+          <a href="#skills">Skills</a>
+          {% if site.cv_link %}
+          <a href="{{ site.cv_link }}" target="_blank" rel="noopener">CV</a>
+          {% endif %}
+        </nav>
+      </div>
+    </header>
 
-        <h1>{{ site.title }}</h1>
-
-        {% if site.position %}
-        <position style="font-size:1.10rem;">{{ site.position }}</position>
-        <br>
-        {% endif %}
-        {% if site.affiliation %}
-        <a href="{{ site.affiliation_link }}" rel="noopener"><autocolor>{{ site.affiliation }}</autocolor></a>
-        <br>
-        {% endif %}
-        {% if site.email %}
-        <email>{{ site.email }}</email>
-        {% endif %}
-
-        <br>
-        <br>
-        <div class="social-icons">
-        {% if site.google_scholar %}
-        <a style="margin: 0 5px 0 0" href="{{ site.google_scholar }}" aria-label="Google Scholar" title="Google Scholar">
-          <i class="ai ai-google-scholar" style="font-size:1.2rem"></i>
-        </a>  
-        {% endif %}
-
-        {% if site.orcid %}
-        <a style="margin: 0 5px 0 0" href="{{ site.orcid }}" aria-label="ORCID" title="ORCID">
-          <i class="fa-brands fa-orcid" style="font-size:1.2rem"></i>
-        </a>
-        {% endif %}
-
-        {% if site.cv_link %}
-        <a style="margin: 0 5px 0 0" href="{{ site.cv_link }}">
-          <i class="ai ai-cv" style="font-size:1.3rem;"></i>
-        </a>
-        {% endif %}
-
-        {% if site.github_link %}
-        <a style="margin: 0 5px 0 0" href="{{ site.github_link }}">
-          <i class="fab fa-github"></i>
-        </a>
-        {% endif %}
-
-        {% if site.linkedin %}
-        <a style="margin: 0 5px 0 0" href="{{ site.linkedin }}">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        {% endif %}
-
-        {% if site.twitter %}
-        <a style="margin: 0 0 0 0" href="{{ site.twitter }}">
-          <i class="fab fa-x-twitter"></i>
-        </a>
-        {% endif %}
-        </div>
-        <br>
-
-      </header>
-      <section>
-
+    <main class="page-container">
       {{ content }}
+    </main>
 
-      <br>
+    <footer class="site-footer">
+      <span>&copy; {{ "now" | date: "%Y" }} {{ site.title }}.</span>
+      <span>Last updated: {{ "now" | date: "%b %Y" }}</span>
+    </footer>
 
-      {% if site.enable_footnote %}
-      <p><small>Powered by Jekyll and <a href="https://github.com/yaoyao-liu/minimal-light" target="_blank" rel="noopener">Minimal Light</a> theme.</small></p>
-      {% endif %}
-
-      </section>
-      <footer>
-        <div class="page-meta" aria-live="polite">
-          <div>
-            Last Updated:
-            <time id="last-updated">Loading...</time>
-          </div>
-          <div id="page-view-counter">
-            This page has been visited
-            <strong id="busuanzi_page_pv">Loading...</strong>
-            times.
-          </div>
-        </div>
-      </footer>
-    </div>
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
-    <script src="https://cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js" defer></script>
     <script>
-      (() => {
-        const lastUpdated = document.getElementById("last-updated");
-        const endpoint = "https://api.github.com/repos/jyzhao05/jyzhao05.github.io/commits?per_page=1";
-        const formatter = new Intl.DateTimeFormat("en-CA", {
-          timeZone: "Asia/Shanghai",
-          year: "numeric",
-          month: "2-digit",
-          day: "2-digit",
-          hour: "2-digit",
-          minute: "2-digit",
-          second: "2-digit",
-          hour12: false
+      document.addEventListener("DOMContentLoaded", function () {
+        // Toggle BibTeX boxes
+        document.querySelectorAll(".btn-bib").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var targetId = btn.getAttribute("data-target");
+            var box = document.getElementById(targetId);
+            if (box) {
+              box.hidden = !box.hidden;
+            }
+          });
         });
 
-        fetch(endpoint, {
-          headers: { Accept: "application/vnd.github+json" }
-        })
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error(`GitHub API returned ${response.status}`);
-            }
-            return response.json();
-          })
-          .then((commits) => {
-            const isoDate = commits[0]?.commit?.committer?.date;
-
-            if (!isoDate) {
-              throw new Error("No commit date was found");
-            }
-
-            const date = new Date(isoDate);
-
-            if (Number.isNaN(date.getTime())) {
-              throw new Error("The commit date is invalid");
-            }
-
-            lastUpdated.textContent = formatter
-              .format(date)
-              .replace(/-/g, "/")
-              .replace(", ", " ");
-            lastUpdated.dateTime = date.toISOString();
-          })
-          .catch((error) => {
-            console.error("Failed to load the last updated time:", error);
-            lastUpdated.textContent = "Unavailable";
+        // Copy BibTeX
+        document.querySelectorAll(".btn-copy-bib").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var codeId = btn.getAttribute("data-copy-target");
+            var codeEl = document.getElementById(codeId);
+            if (!codeEl) return;
+            navigator.clipboard.writeText(codeEl.textContent).then(function () {
+              var oldText = btn.textContent;
+              btn.textContent = "Copied!";
+              setTimeout(function () {
+                btn.textContent = oldText;
+              }, 1500);
+            });
           });
-      })();
+        });
 
-      (() => {
-        const counter = document.getElementById("busuanzi_page_pv");
-
-        if (!counter) {
-          return;
+        // Highlight active nav link on scroll
+        var sections = document.querySelectorAll("section[id]");
+        var navLinks = document.querySelectorAll(".nav-links a[href^='#']");
+        function onScroll() {
+          var scrollY = window.scrollY + 110;
+          var currentId = "";
+          sections.forEach(function (sec) {
+            if (sec.offsetTop <= scrollY) {
+              currentId = sec.getAttribute("id");
+            }
+          });
+          navLinks.forEach(function (link) {
+            link.classList.toggle("active", link.getAttribute("href") === "#" + currentId);
+          });
         }
-
-        const formatCounter = () => {
-          const value = counter.textContent.trim();
-
-          if (!/^\d+$/.test(value)) {
-            return;
-          }
-
-          const formatted = value.padStart(6, "0");
-
-          if (formatted === value) {
-            return;
-          }
-
-          observer.disconnect();
-          counter.textContent = formatted;
-          observer.observe(counter, { childList: true, characterData: true, subtree: true });
-        };
-
-        const observer = new MutationObserver(formatCounter);
-        observer.observe(counter, { childList: true, characterData: true, subtree: true });
-        formatCounter();
-      })();
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+      });
     </script>
-    {% if site.google_analytics %}
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', '{{ site.google_analytics }}', 'auto');
-      ga('send', 'pageview');
-    </script>
-    {% endif %}
   </body>
 </html>
