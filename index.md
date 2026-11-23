@@ -77,7 +77,7 @@ layout: homepage
     </div>
     <div class="callout-item">
       <span class="callout-emoji">🔎</span>
-      <span>I am actively looking for <strong>MPhil / Ph.D.</strong> or <strong>Research Assistant (RA)</strong> opportunities.</span>
+      <span>I am actively looking for <strong>MPhil / Ph.D.</strong> or <strong>RA</strong> opportunities.</span>
     </div>
   </div>
 </section>
