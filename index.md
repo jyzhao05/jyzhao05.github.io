@@ -182,3 +182,10 @@ layout: homepage
     </div>
   </div>
 </section>
+
+<section id="beyond" class="section">
+  <h2 class="section-title"><i class="fa-regular fa-compass section-icon"></i> Beyond Research</h2>
+  <p class="beyond-text">
+    Outside of research, I enjoy taking life slow—noticing good architecture, roadside flowers, and passing scenery. I am also learning photography, listening to J-POP, and enjoying a good beer.
+  </p>
+</section>
